@@ -27,7 +27,7 @@ void part1UsingTrafficRules() {
   LineString3d middleLs{examples::getLineStringAtY(2)};
   LineString3d rightLs{examples::getLineStringAtY(0)};
   LineString3d nextLeftLs{utils::getId(),
-                          {middleLs.back(), Point3d(utils::getId(), middleLs.back().x() + 1., middleLs.back().y())}};
+                          {leftLs.back(), Point3d(utils::getId(), leftLs.back().x() + 1., leftLs.back().y())}};
   LineString3d nextRightLs{utils::getId(),
                            {rightLs.back(), Point3d(utils::getId(), rightLs.back().x() + 1, rightLs.back().y())}};
   Lanelet left{utils::getId(), leftLs, middleLs};
